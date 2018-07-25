@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta http-equiv="X-UA-Compatible" content="ie=edge">
+<title>Assignment 11.3</title>
+</head>
+<body>
+	<a id="google" target="_self" href="https://www.w3resource.com/">google</a>
+	<div id="attrs"></div>
+	<button onclick="show()">Show Attributes Of link</button>
+	<button onclick="remove()">Remove Result</button>
+	<script>
+
+		//Attribute value of anchor shown
+		function show(){
+		var anchor= document.getElementById("google");
+		var divElement= document.getElementsByTagName("div");
+		var anchorAttr = anchor.attributes;
+		divElement[0].innerText = "Value of anchor is " + anchorAttr[0].value + "," + anchorAttr[1].value + "," + anchorAttr[2].value;
+		}
+		
+		//html of div removed 
+		function remove(){
+		var divElement= document.getElementsByTagName("div");
+		divElement[0].innerText= "";
+		}
+	</script> 
+</body>
+</html>
